@@ -1,0 +1,233 @@
+.player-card {
+  background: rgba(18, 24, 38, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 32px 28px;
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7),
+              0 0 0 1px rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.header-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: rgba(99, 102, 241, 0.12);
+  color: #818cf8;
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 8px #10b981;
+}
+
+/* Vinyl Album Art */
+.album-art-container {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin: 12px 0 28px;
+}
+
+.vinyl-disc {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle, #312e81 0%, #1e1b4b 35%, #0f172a 70%, #020617 100%);
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(255, 255, 255, 0.05);
+  transition: transform 0.4s ease;
+}
+
+.vinyl-disc.spinning {
+  animation: spin 8s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.disc-center {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #6366f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #0f172a;
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.3);
+}
+
+.disc-center-hole {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #020617;
+}
+
+/* Song Metadata */
+.song-info {
+  margin-bottom: 24px;
+}
+
+.song-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+}
+
+.song-subtitle {
+  font-size: 1rem;
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+.song-meta-tags {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.meta-pill {
+  font-size: 0.75rem;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #cbd5e1;
+}
+
+/* Controls */
+.controls-container {
+  width: 100%;
+  margin-top: 12px;
+}
+
+.play-button {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  border: none;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.45);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 24px;
+}
+
+.play-button:hover {
+  transform: scale(1.06);
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.6);
+}
+
+.play-button:active {
+  transform: scale(0.95);
+}
+
+/* Native HTML Audio element wrapper */
+.audio-element-wrapper {
+  width: 100%;
+  margin-top: 8px;
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 12px;
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.audio-element-label {
+  display: block;
+  font-size: 0.72rem;
+  color: #64748b;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+audio {
+  width: 100%;
+  height: 38px;
+  border-radius: 8px;
+  outline: none;
+  filter: invert(1) hue-rotate(180deg) brightness(0.9);
+}
+
+/* Architecture Flow Box */
+.flow-diagram-box {
+  margin-top: 24px;
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+  font-size: 0.78rem;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.flow-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.flow-step-name {
+  color: #e2e8f0;
+  font-weight: 600;
+}
+
+.flow-arrow {
+  color: #6366f1;
+  font-weight: bold;
+}
+
+/* Loading & Error */
+.state-box {
+  padding: 40px 20px;
+  color: #94a3b8;
+  font-size: 1.1rem;
+}
+
+.error-text {
+  color: #f87171;
+}
+
+.retry-button {
+  margin-top: 12px;
+  padding: 6px 16px;
+  border-radius: 8px;
+  background: #334155;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
