@@ -1,0 +1,48 @@
+# Environment and local secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+backend/venv/
+venv/
+.venv/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+*.tsbuildinfo
+
+# Maven / Java
+Testing/target/
+
+# IDE and editor files
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local logs and runtime files
+*.log
+*.pid
+
+# Ignore all MP3 files
+*.mp3
+
+# Ignore songs directory
+backend/songs/
+
+*.mp3
+backend/songs/
