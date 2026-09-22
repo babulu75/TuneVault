@@ -43,3 +43,6 @@ Thumbs.db
 
 # Ignore songs directory
 backend/songs/
+
+*.mp3
+backend/songs/
