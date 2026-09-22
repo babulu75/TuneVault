@@ -1,6 +1,6 @@
-# TuneFault
+# TuneVault
 
-TuneFault is a full-stack music-library application. It lets visitors browse and play uploaded MP3 files, while signed-in users can create playlists and save favorite songs.
+TuneVault is a full-stack music-library application. It lets visitors browse and play uploaded MP3 files, while signed-in users can create playlists and save favorite songs.
 
 ## Technology overview
 
